@@ -6,7 +6,7 @@ import json
 import requests
 
 REPO_URL = ""   # eg. org/repo
-GHTOKEN = ""    #github token
+GH_TOKEN = ""    #github token
 EVENT_NAME = "" #mandatory name for the event. can be dynamically provided  
 
 
@@ -18,7 +18,7 @@ def main(req: func.HttpRequest) -> func.HttpResponse:
 
     #HTTP header
     headers = {
-        'Authorization': 'Bearer',
+        'Authorization': 'Bearer ' + GH_TOKEN,
         'Content-Type': 'text/plain'
         }
 
