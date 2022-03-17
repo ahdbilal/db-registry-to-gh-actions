@@ -14,7 +14,7 @@ def main(req: func.HttpRequest) -> func.HttpResponse:
     logging.info('Python HTTP trigger function processed a request.')
 
     #HTTP url
-    url = "https://api.github.com/repos/" + REPO_URL + "dispatches"
+    url = "https://api.github.com/repos/" + REPO_URL + "/dispatches"
 
     #HTTP header
     headers = {
@@ -33,4 +33,3 @@ def main(req: func.HttpRequest) -> func.HttpResponse:
     return func.HttpResponse(
             status_code=200
         )
-
