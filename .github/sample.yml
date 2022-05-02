@@ -15,4 +15,4 @@ jobs:
           BASE_URL: ${{ secrets.BASE_URL }} # url of the databricks workspace that hosts the model
           TOKEN: ${{ secrets.TOKEN }} # PAT or Service Principal of the databricks workspace
           event_message: ${{ toJson(github.event.client_payload) }}
-      run: python3 .github/api/post_comment.py
+      run: python3 .github/workflow/post_comment.py
